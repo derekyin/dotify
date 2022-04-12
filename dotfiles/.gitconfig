@@ -49,6 +49,15 @@
 	autosetuprebase = always
 	rebase = true
 
+[diff]
+  tool = difftastic
+
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[alias]
+	dft = difftool
+
 [difftool]
     prompt = false
 
