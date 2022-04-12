@@ -65,7 +65,7 @@ eval $(gdircolors $HOME/.LS_COLORS)
 export KUBECONFIG=/Users/$DEFAULT_USER/.kube/config
 
 if [ -x "$(command -v gimme)" ]; then
-  eval "$(gimme 1.18)" > /dev/null 2>&1
+  eval "$(gimme 1.18.1)" > /dev/null 2>&1
   export GOBIN=$GOROOT/bin
   export GOPATH=$HOME
   export GO111MODULE=on
