@@ -25,7 +25,7 @@ brew 'gimme'
 brew 'node'
 brew 'python'
 brew 'ruby-build'
-# brew 'rbenv'
+brew 'rbenv'
 brew 'rust'
 
 # utilities
@@ -60,10 +60,9 @@ brew 'zsh'
 
 # applications
 cask 'appcleaner'
-cask 'discord'
 cask 'docker'
 cask 'google-cloud-sdk'
 cask 'iterm2'
 cask 'rectangle'
-cask 'tuple'
 cask 'visual-studio-code'
+cask 'zoom'

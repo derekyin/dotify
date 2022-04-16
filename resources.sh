@@ -58,7 +58,7 @@ function SSH_Keygen() {
   ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C $email
   eval "$(ssh-agent -s)"
   cat sshconfig > ~/.ssh/config
-  ssh-add -K ~/.ssh/id_ed25519
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 }
 
 function symlink_dot_files() {

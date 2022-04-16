@@ -12,10 +12,11 @@ xcode-select --install
 set_computer_info
 
 # homebrew
-if [ -x /usr/local/bin/brew ];
+if [ -x /opt/homebrew/bin/brew ];
 then
   running "Skipping install of brew. It is already installed.";
   running "Updating brew..."
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   brew update;
   running "Updated brew."
   ok
@@ -27,6 +28,7 @@ else
     exit 2
   fi
   ok
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 bot "fetching brew packages";
@@ -53,12 +55,12 @@ export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 # setup rbenv & install ruby
-# RUBY_VERSION=2.7.0
-# echo "🦄  ruby" $RUBY_VERSION
-# running "rbenv install ruby:$RUBY_VERSION"
-# rbenv install -s $RUBY_VERSION
-# rbenv global $RUBY_VERSION
-# ok rbenv
+RUBY_VERSION=3.1.0
+echo "🦄  ruby" $RUBY_VERSION
+running "rbenv install ruby:$RUBY_VERSION"
+rbenv install -s $RUBY_VERSION
+rbenv global $RUBY_VERSION
+ok rbenv
 
 running "npm settings"
 mkdir ~/.npm-global

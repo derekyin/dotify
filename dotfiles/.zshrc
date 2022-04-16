@@ -1,9 +1,9 @@
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
 # shellcheck disable=SC2034
-DEFAULT_USER=$(whoami)
+DEFAULT_USER=$USER
 
-export ZSH="/Users/$DEFAULT_USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 export EDITOR=nano
 export PATH=$HOME/.npm-global/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
@@ -62,7 +62,7 @@ fi
 
 eval $(gdircolors $HOME/.LS_COLORS)
 
-export KUBECONFIG=/Users/$DEFAULT_USER/.kube/config
+export KUBECONFIG=$HOME/.kube/config
 
 if [ -x "$(command -v gimme)" ]; then
   eval "$(gimme 1.18.1)" > /dev/null 2>&1
