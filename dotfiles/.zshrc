@@ -4,9 +4,11 @@
 DEFAULT_USER=$USER
 
 export ZSH="$HOME/.oh-my-zsh"
+export GOPATH=$HOME
+export GO111MODULE=on
 
 export EDITOR=nano
-export PATH=$HOME/.npm-global/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.npm-global/bin:$GOPATH/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
 
 export DOCKER_BUILDKIT=1
 
@@ -63,10 +65,3 @@ fi
 eval $(gdircolors $HOME/.LS_COLORS)
 
 export KUBECONFIG=$HOME/.kube/config
-
-if [ -x "$(command -v gimme)" ]; then
-  eval "$(gimme 1.18.2)" > /dev/null 2>&1
-  export GOBIN=$GOROOT/bin
-  export GOPATH=$HOME
-  export GO111MODULE=on
-fi

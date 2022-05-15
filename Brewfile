@@ -21,7 +21,7 @@ brew 'hub'
 brew 'gh'
 
 # languages
-brew 'gimme'
+brew 'go'
 brew 'node'
 brew 'python'
 brew 'ruby-build'
