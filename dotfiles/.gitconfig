@@ -1,3 +1,4 @@
+
 [user]
 	name = Aditya Sharma
 	email = git@adi.run
@@ -75,19 +76,15 @@
 	decorate = true
 	topo-order = true
 
-[push]
-	default = simple
-
 [status]
 	submodulesummary = true
 
 [merge]
 	conflictstyle = diff3
 
-[hub]
-	protocol = https
 [pull]
 	rebase = true
+	default = current
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
