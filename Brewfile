@@ -17,7 +17,6 @@ cask 'font-sf-mono-nerd-font'
 
 # version control
 brew 'git'
-brew 'hub'
 brew 'gh'
 
 # languages
