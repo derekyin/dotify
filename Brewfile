@@ -46,6 +46,7 @@ brew 'krew'
 brew 'kubectx'
 brew 'kubernetes-cli'
 brew 'lsd'
+brew 'mas'
 brew 'nano'
 brew 'ripgrep'
 brew 'shellcheck'
@@ -65,6 +66,16 @@ cask 'iterm2'
 cask 'rectangle'
 cask 'visual-studio-code'
 cask 'zoom'
-cask 'slack'
 cask '1password-cli'
 cask '1password'
+
+# Mac App Store
+mas "1Password for Safari", id: 1569813296
+mas "Hush", id: 1544743900
+mas "Infuse", id: 1136220934
+mas "Refined GitHub", id: 1519867270
+mas "Sequel Ace", id: 1518036000
+mas "Slack", id: 803453959
+mas "Structured", id: 1499198946
+mas "Tailscale", id: 1475387142
+mas "Wipr", id: 1320666476
