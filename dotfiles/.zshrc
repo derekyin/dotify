@@ -21,14 +21,17 @@ export FZF_BASE=$(command -v fzf)
 # shellcheck disable=SC2034
 plugins=(
   fzf
+  1password
   autojump
   autoupdate
   colorize
   colored-man-pages
   docker
   fast-syntax-highlighting
+  gh
   git
   history-substring-search
+  ripgrep
   vscode
   you-should-use
   zsh-autosuggestions

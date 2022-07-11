@@ -55,10 +55,10 @@ export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 # setup rbenv & install ruby
-RUBY_VERSION=3.1.0
+RUBY_VERSION=3.1.2
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
-rbenv install -s $RUBY_VERSION
+RUBY_CONFIGURE_OPTS=--with-openssl-dir=$(brew --prefix openssl@1.1) rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 ok rbenv
 
