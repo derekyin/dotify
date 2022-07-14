@@ -127,9 +127,4 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$PWD/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 ok
 
-SSH_Keygen
 bot "Setup complete"
-
-bot "Add the following sshkey to Github at https://github.com/settings/ssh/new"
-cat ~/.ssh/id_ed25519.pub
-ok

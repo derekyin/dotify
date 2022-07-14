@@ -52,15 +52,6 @@ function set_computer_info() {
   sudo scutil --set LocalHostName "$cpname"
 }
 
-function SSH_Keygen() {
-  echo -n "\n$COL_MAGENTA set your email$COL_RESET:"
-  read email
-  ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C $email
-  eval "$(ssh-agent -s)"
-  cat sshconfig > ~/.ssh/config
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-}
-
 function symlink_dot_files() {
   dir="$(git rev-parse --show-toplevel)/dotfiles"
 
